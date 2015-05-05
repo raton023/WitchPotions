@@ -22,7 +22,7 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void clickpotion(PlayerInteractEvent e){
 	    Player p = e.getPlayer();
-	    if (e.getAction() == Action.RIGHT_CLICK_BLOCK){
+	    if (e.getAction() == Action.LEFT_CLICK_BLOCK){
 	    	 Block b = e.getClickedBlock();
 	    	 if(b.getType().equals(Material.CAULDRON) && p.getItemInHand().getType().equals(Material.POTION)) {
 	    		 int a = b.getData();
