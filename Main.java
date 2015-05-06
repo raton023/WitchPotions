@@ -28,7 +28,8 @@ public class Main extends JavaPlugin implements Listener {
 	    		 int a = b.getData();
 		    		 if(a <= 3){a++;
 		    		 b.setData((byte) a);
-		    		 potions.add(p.getItemInHand().getData().toString().replace("POTION(", "").replace(")", ""));}
+		    		 potions.add(p.getItemInHand().getData().toString().replace("POTION(", "").replace(")", ""));
+		    		 p.setItemInHand(null);}
 		    		 if(potions.size() == 3){
 		    			 p.sendMessage(ChatColor.LIGHT_PURPLE + "you create a new potion");
 		    			 ItemStack potion = new ItemStack(Material.POTION, 1, (short)16384);
@@ -89,13 +90,12 @@ public class Main extends JavaPlugin implements Listener {
 		    			 if(potions.get(num).contentEquals("40")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WEAKNESS, 1800, 0), true);}
 		    			 if(potions.get(num).contentEquals("72")){
-				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WEAKNESS, 4800, 0), true);}
-		    		 }
-		    			 meta.setDisplayName(ChatColor.LIGHT_PURPLE + "Witch Potion");
-			    		 potion.setItemMeta(meta);
-			    		 p.getInventory().addItem(potion);
-		    		 potions.remove(0);
-	    			 potions.remove(0);
-	    			 potions.remove(0);
-	    			 a=0;
-		    		 b.setData((byte) 0);}}}}}
+				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WEAKNESS, 4800, 0), true);}}
+		    		meta.setDisplayName(ChatColor.LIGHT_PURPLE + "Witch Potion");
+		    		potion.setItemMeta(meta);
+		    		p.getInventory().addItem(potion);
+		    		potions.remove(0);
+		    		potions.remove(0);
+		    		potions.remove(0);
+		    		a=0; 
+		    		b.setData((byte) 0);}}}}}
