@@ -1,0 +1,7 @@
+name: WitchPotions
+main: com.craftilandia.potionmixer.Main
+version: 5.0
+permissions:
+    witchpotions.create:
+        description: to create potions.
+        default: op
