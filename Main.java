@@ -22,6 +22,7 @@ public class Main extends JavaPlugin implements Listener {
 	@EventHandler
 	public void clickpotion(PlayerInteractEvent e){
 	    Player p = e.getPlayer();
+	    if(p.hasPermission("witchpotions.create")){
 	    if (e.getAction() == Action.LEFT_CLICK_BLOCK){
 	    	 Block b = e.getClickedBlock();
 	    	 if(b.getType().equals(Material.CAULDRON) && p.getItemInHand().getType().equals(Material.POTION)) {
@@ -73,6 +74,12 @@ public class Main extends JavaPlugin implements Listener {
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.REGENERATION, 440, 1), true);}
 		    			 if(potions.get(num).contentEquals("65")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.REGENERATION, 2400, 0), true);}
+		    			 if(potions.get(num).contentEquals("11")){
+				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 3600, 0), true);}
+		    			 if(potions.get(num).contentEquals("43")){
+		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 1800, 1), true);}
+		    			 if(potions.get(num).contentEquals("75")){
+		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 9600, 0), true);}
 		    			 if(potions.get(num).contentEquals("42")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SLOW, 1800, 0), true);}
 		    			 if(potions.get(num).contentEquals("74")){
@@ -98,4 +105,4 @@ public class Main extends JavaPlugin implements Listener {
 		    		potions.remove(0);
 		    		potions.remove(0);
 		    		a=0; 
-		    		b.setData((byte) 0);}}}}}
+		    		b.setData((byte) 0);}}}}}}
