@@ -98,78 +98,167 @@ public class Main extends JavaPlugin implements Listener {
 				    		 }
 		    			 if(potions.get(num).contentEquals("9")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 3600, 0), true);
+				    		 int a23 =  lore.indexOf("Strength II 1:30");
+				    		 int a24 =  lore.indexOf("Strength 8:00");
+				    		 if(a23 == -1 && a24 == -1){lore.add("Strength 3:00");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("41")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1800, 1), true);
+				    		 int a23 =  lore.indexOf("Strength 3:00");
+				    		 int a24 =  lore.indexOf("Strength 8:00");
+				    		 
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 if(a24 == -1){lore.add("Strength II 1:30");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("73")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 9600, 0), true);
-				    		}
+				    		 int a23 =  lore.indexOf("Strength II 1:30");if(a23 != -1){lore.remove(a23);}
+				    		 int a24 =  lore.indexOf("Strength 3:00");if(a24 != -1){lore.remove(a24);}
+				    		 lore.add("Strength 8:00");
+				    		 }
 		    			 if(potions.get(num).contentEquals("46")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 3600, 0), true);
+				    		 int a23 =  lore.indexOf("Invisibility 8:00");
+				    		 if(a23 == -1){
+				    			 lore.add("Invisibility 3:00");}
+				    		 
 				    		 }
 		    			 if(potions.get(num).contentEquals("78")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 9600, 0), true);
+				    		 int a23 =  lore.indexOf("Invisibility 3:00");
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 lore.add("Invisibility 8:00");
+				    		 
 				    		 }
 		    			 if(potions.get(num).contentEquals("38")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 3600, 0), true);
+				    		 int a23 =  lore.indexOf("Night Vision 8:00");
+				    		 if(a23 == -1){
+				    			 lore.add("Night Vision 3:00");}
+				    		 
 				    		 }
 		    			 if(potions.get(num).contentEquals("70")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 9600, 0), true);
+				    		 int a23 =  lore.indexOf("Night Vision 3:00");
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 lore.add("Night Vision 8:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("4")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.POISON, 900, 0), true);
+				    		 int a23 =  lore.indexOf("Poison II 0:22");
+				    		 int a24 =  lore.indexOf("Poison 2:00");
+				    		 if(a23 == -1 && a24 == -1){lore.add("Poison 0:45");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("36")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.POISON, 440, 1), true);
+				    		 int a23 =  lore.indexOf("Poison 0:45");
+				    		 int a24 =  lore.indexOf("Poison 2:00");
+				    		 
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 if(a24 == -1){lore.add("Poison II 0:22");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("68")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.POISON, 2400, 0), true);
+				    		 int a23 =  lore.indexOf("Poison II 0:22");if(a23 != -1){lore.remove(a23);}
+				    		 int a24 =  lore.indexOf("Poison 0:45");if(a24 != -1){lore.remove(a24);}
+				    		 lore.add("Poison 2:00");
+				    		 
 				    		 }
 		    			 if(potions.get(num).contentEquals("1")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.REGENERATION, 900, 0), true);
+				    		 int a23 =  lore.indexOf("Regeneration II 0:22");
+				    		 int a24 =  lore.indexOf("Regeneration 2:00");
+				    		 if(a23 == -1 && a24 == -1){lore.add("Regeneration 0:45");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("33")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.REGENERATION, 440, 1), true);
+		    				 int a23 =  lore.indexOf("Regeneration 0:45");
+				    		 int a24 =  lore.indexOf("Regeneration 2:00");
+				    		 
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 if(a24 == -1){lore.add("Regeneration II 0:22");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("65")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.REGENERATION, 2400, 0), true);
+		    				 int a23 =  lore.indexOf("Regeneration II 0:22");if(a23 != -1){lore.remove(a23);}
+				    		 int a24 =  lore.indexOf("Regeneration 0:45");if(a24 != -1){lore.remove(a24);}
+				    		 lore.add("Regeneration 2:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("11")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 3600, 0), true);
+				    		 int a23 =  lore.indexOf("Jump II 1:30");
+				    		 int a24 =  lore.indexOf("Jump 8:00");
+				    		 if(a23 == -1 && a24 == -1){lore.add("Jump 3:00");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("43")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 1800, 1), true);
+		    				 int a23 =  lore.indexOf("Jump 3:00");
+				    		 int a24 =  lore.indexOf("Jump 8:00");
+				    		 
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 if(a24 == -1){lore.add("Jump II 1:30");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("75")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.JUMP, 9600, 0), true);
+		    				 int a23 =  lore.indexOf("Jump II 1:30");if(a23 != -1){lore.remove(a23);}
+				    		 int a24 =  lore.indexOf("Jump 3:00");if(a24 != -1){lore.remove(a24);}
+				    		 lore.add("Jump 8:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("42")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SLOW, 1800, 0), true);
+		    				 int a23 =  lore.indexOf("Slowness 4:00");
+				    		 if(a23 == -1){
+				    			 lore.add("Slowness 1:30");}
 				    		}
 		    			 if(potions.get(num).contentEquals("74")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SLOW, 4800, 0), true);
+		    				 int a23 =  lore.indexOf("Slowness 1:30");
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 lore.add("Slowness 4:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("2")){ 
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SPEED, 3600, 0), true);
+		    				 int a23 =  lore.indexOf("Speed II 1:30");
+				    		 int a24 =  lore.indexOf("Speed 8:00");
+				    		 if(a23 == -1 && a24 == -1){lore.add("Speed 3:00");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("34")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SPEED, 1800, 1), true);
+		    				 int a23 =  lore.indexOf("Speed 3:00");
+				    		 int a24 =  lore.indexOf("Speed 8:00");
+				    		 
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 if(a24 == -1){lore.add("Speed II 1:30");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("66")){
 		    				 meta.addCustomEffect(new PotionEffect(PotionEffectType.SPEED, 9600, 0), true);
+		    				 int a23 =  lore.indexOf("Speed II 1:30");if(a23 != -1){lore.remove(a23);}
+				    		 int a24 =  lore.indexOf("Speed 3:00");if(a24 != -1){lore.remove(a24);}
+				    		 lore.add("Speed 8:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("45")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, 3600, 0), true);
+				    		 int a23 =  lore.indexOf("Water Breathing 8:00");
+				    		 if(a23 == -1){
+				    			 lore.add("Water Breathing 3:00");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("77")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, 9600, 0), true);
+				    		 int a23 =  lore.indexOf("Water Breathing 3:00");
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 lore.add("Water Breathing 8:00");
 				    		 }
 		    			 if(potions.get(num).contentEquals("40")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WEAKNESS, 1800, 0), true);
+				    		 int a23 =  lore.indexOf("Slowness 4:00");
+				    		 if(a23 == -1){
+				    			 lore.add("Slowness 1:30");}
 				    		 }
 		    			 if(potions.get(num).contentEquals("72")){
 				    		 meta.addCustomEffect(new PotionEffect(PotionEffectType.WEAKNESS, 4800, 0), true);
+				    		 int a23 =  lore.indexOf("Slowness 1:30");
+				    		 if(a23 != -1){lore.remove(a23);}
+				    		 lore.add("Slowness 4:00");
 				    		 }}
 
 
@@ -339,6 +428,13 @@ public class Main extends JavaPlugin implements Listener {
 		    		
 		    		if(getConfig().getString("potiontype").equalsIgnoreCase("potion")){
 		    			meta.setLore(lore);
+		    		}
+		    		if(getConfig().getString("potiontype").equalsIgnoreCase("splash")){
+		    			List<String> slore = new ArrayList<String>();
+		    			slore.clear();
+		    			slore.add("Splash!");
+		    			meta.setLore(slore);
+		    			slore.clear();
 		    		}
 		    		potion.setItemMeta(meta);
 		    		p.getInventory().addItem(potion);
