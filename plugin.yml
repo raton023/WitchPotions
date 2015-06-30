@@ -1,9 +1,9 @@
 name: WitchPotions
 main: com.craftilandia.witchpotions.Main
-version: 6.0
+version: 7.0
 author: raton023
 website: http://dev.bukkit.org/bukkit-plugins/witchpotions/
 permissions:
     witchpotions.create:
         description: to create potions.
-        default: op
+        default: true
