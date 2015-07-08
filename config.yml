@@ -1,4 +1,8 @@
-# potiontype: splash or potion
 # potionname: the name to show on potions
 # potionmsg: the message that is sent when a potion is mixed
-
+# economy: true or false to allow economy system with vault
+# potioncost: the cost per potions mix
+potionname: '&bWitch Potions'
+potionmsg: '&aYou create a new potion'
+economy: false
+potioncost: 10
